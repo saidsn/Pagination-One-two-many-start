@@ -1,0 +1,36 @@
+﻿
+@model Social
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container-fluid my-3 mx-3">
+    <div class="table-responsive pt-3">
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Url
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        @Model.Name
+                    </td>
+                    <td>
+                        @Model.Url
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a asp-controller="Social" asp-action="Index" class="btn btn-primary my-2">Back</a>
+
+    </div>
+</div>
+

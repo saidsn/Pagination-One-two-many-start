@@ -1,0 +1,44 @@
+﻿
+@model Social
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="container">
+    <div class="row my-5">
+        <span class="text-danger">@ViewBag.Message</span>
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-description">
+                        Social
+                    </p>
+                    <form asp-controller="Social" asp-action="Create" class="forms-sample" method="post">
+                        <div class="form-group"
+
+
+                            <label for="exampleInputUsername1">Name</label>
+                            <input maxlength="" minlength="" type="text" class="form-control" asp-for="Name">
+                            <span class="text-danger" asp-validation-for="Name"></span>
+
+
+                            <label for="exampleInputUsername1">Url</label>
+                            <input type="text" class="form-control" asp-for="Url">
+                            <span class="text-danger" asp-validation-for="Url"></span>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-primary me-2">Create</button>
+                        <a asp-controller="Social" asp-action="Index" class="btn btn-light">Cancel</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationPartial" />
+}
+

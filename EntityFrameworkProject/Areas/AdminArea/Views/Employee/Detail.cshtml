@@ -1,0 +1,60 @@
+﻿
+
+@model Employee
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container-fluid my-3 mx-3">
+    <div class="table-responsive pt-3">
+        <h2 style="text-align:center; color:blue" class="mb-5">- Employee Detail -</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        FullName
+                    </th>
+                    <th>
+                        Age
+                    </th>
+                    <th>
+                        Position
+                    </th>
+                    <th>
+                        On/Of
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        @Model.FullName
+                    </td>
+                    <td>
+                        @Model.Age
+                    </td>
+                    <td>
+                        @Model.Position
+                    </td>
+                    <td>
+                        @if (Model.IsActive)
+                        {
+                            <div style="width:30px;height:30px; background-color: greenyellow;border-radius: 50%;display:inline-block;"> </div>
+
+                        }
+                        else
+                        {
+                            <div style="width: 30px; height: 30px; background-color: red; border-radius: 50%; display: inline-block "> </div>
+
+                        }
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <a asp-controller="Employee" asp-action="Index" class="btn btn-primary my-3">Back</a>
+
+</div>
+

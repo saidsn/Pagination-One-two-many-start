@@ -1,0 +1,31 @@
+﻿
+@model Slider
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container-fluid my-3 mx-3">
+    <div class="table-responsive pt-3">
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th style="text-align:center">
+                        <h3 style="color:blue">- Image Detail -</h3>
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="~/img/@Model.Image" style="text-align:center; width:100% !important; height:500px !important; border-radius: 15px" alt="image" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <a asp-controller="Slider" asp-action="Index" class="btn btn-primary my-3">Back</a>
+</div>
+
+
